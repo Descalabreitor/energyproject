@@ -6,9 +6,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import energypriceproject.models.Market;
+
 
 public class ApiRequester {
-   public static String request(Zone zone) throws IOException {
+   public static String request(Market zone) throws IOException {
       // Create the URL to the API endpoint
       URL url = new URL("https://api.preciodelaluz.org/v1/prices/now?zone=" + zone.toString());
 
@@ -47,8 +49,8 @@ public class ApiRequester {
       } else {
          // Print the error message
          System.out.println("Request failed with code: " + responseCode);
+         return null;
       }
-      return null;
    }
 }
 
