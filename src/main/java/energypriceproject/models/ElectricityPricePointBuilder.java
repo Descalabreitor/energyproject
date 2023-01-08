@@ -1,7 +1,6 @@
 package energypriceproject.models;
 
-import java.time.LocalTime;
-import java.util.Date;
+import java.time.ZonedDateTime;
 
 public class ElectricityPricePointBuilder {
     
@@ -11,13 +10,8 @@ public class ElectricityPricePointBuilder {
         electricityPricePoint = new ElectricityPricePoint();
     }
 
-    public ElectricityPricePointBuilder setDate(Date date) {
-        electricityPricePoint.setDate(date);
-        return this;
-    }
-
-    public ElectricityPricePointBuilder setHour(LocalTime hour) {
-        electricityPricePoint.setHour(hour);
+    public ElectricityPricePointBuilder setDate(ZonedDateTime zonedDateTime) {
+        electricityPricePoint.setDate(zonedDateTime);
         return this;
     }
 
@@ -49,6 +43,4 @@ public class ElectricityPricePointBuilder {
     public ElectricityPricePoint build() {
         return electricityPricePoint;
     }
-        
-
 }

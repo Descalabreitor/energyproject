@@ -1,32 +1,14 @@
 package energypriceproject.models;
 
-import java.time.LocalTime;
-import java.util.Date;
+import java.time.ZonedDateTime;
 
 public class ElectricityPricePoint {
-    private Date date;
-    private LocalTime hour;
+    private ZonedDateTime date;
     private boolean isCheap;
     private boolean isUnderAvg;
     private Market market;
     private float price;
     private String units;
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public LocalTime getHour() {
-        return hour;
-    }
-
-    public void setHour(LocalTime hour) {
-        this.hour = hour;
-    }
 
     public boolean isCheap() {
         return isCheap;
@@ -66,6 +48,14 @@ public class ElectricityPricePoint {
 
     public void setUnits(String units) {
         this.units = units;
+    }
+
+    public ZonedDateTime getDate() {
+        return date;
+    }
+
+    public void setDate(ZonedDateTime zonedDateTime) {
+        this.date = zonedDateTime;
     }
 }
 
